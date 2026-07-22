@@ -1,29 +1,24 @@
 # Mushroom Classification — ML Projects
 
-Two machine learning projects built around mushroom data: a tabular classifier
-that predicts edibility, and an image classifier that identifies mushroom
-genus from photos.
+Two machine learning projects built around mushroom data:
 
-## Structure
+- **[mushroom-edibility-classifier](./mushroom-edibility-classifier)** — predicts
+  whether a mushroom is edible or poisonous from 20 physical attributes
+  (cap shape, gill traits, stem measurements, habitat, season, etc.) using
+  classic tabular models (Decision Tree, Random Forest, k-NN). Best model:
+  Random Forest at ~99.98% accuracy.
 
-```
-.
-├── mushroom-edibility-classifier/       Edible vs. poisonous classifier (tabular data)
-│   └── README.md                        Full details: approach, model comparison, usage
-│
-├── mushroom-genus-image-classifier/     Mushroom genus classifier (images, MobileNetV2)
-│   └── README.md                        Full details: approach, training results, usage
-│
-└── data/
-    ├── mushroom_mixed_50000.csv         Tabular training data
-    ├── mushroom_mixed_test.csv          Tabular holdout/test data
-    └── mushroom_images/                 Labeled mushroom photos
-        ├── Agaricus/
-        └── Amanita/
-```
+- **[mushroom-genus-image-classifier](./mushroom-genus-image-classifier)** —
+  identifies a mushroom's genus (Agaricus, Amanita, Boletus, Cortinarius,
+  Entoloma, Hygrocybe, Lactarius, Russula, Suillus) from a photo using a
+  fine-tuned MobileNetV2, reaching ~69.6% validation accuracy.
 
-Each project directory has its own README with full details on approach,
-models, results, and usage — see the links above.
+Training data lives in `data/`: `mushroom_mixed_50000.csv` and
+`mushroom_mixed_test.csv` for the tabular model, and `mushroom_images/`
+(currently Agaricus and Amanita only) for the image model.
+
+Each project folder has its own README with full details on approach,
+models, results, and usage.
 
 ## Large files
 
